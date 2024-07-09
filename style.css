@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*The items are selected in the order they appear on the page. 
+There are three major sections: header, middle and footer. 
+Header is divided into navbar and hero;
+Middle is not a section per se, as its not in a div, but it contains the main content of the page: infos, quotebanner and banner.
+Footer is not divided. 
+*/
 
 body{
+    height: 100vh;
+    font-family: roboto, sans-serif;
     display: flex;
     flex-direction: column;
-    font-family: roboto, sans-serif;
-    margin: 0;
     justify-content: space-between;
-    gap:20px;
+    margin: 0;
+    gap: 20px;
 }
 
 p{
@@ -16,6 +25,10 @@ p{
 .header{
     background-color: #1F2937;
     color: #f9faf8;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 250px;
+    gap: 20px;
 }
 
 h5{
@@ -25,9 +38,8 @@ h5{
 
 .navbar{
     display: flex;
+    justify-content: space-between;
     font-size: 24px;
-    justify-content: space-around;
-    padding:10px;
 }
 
 .navbarlinks{
@@ -41,10 +53,37 @@ a{
     text-decoration: none;
 }
 
-.middle{
+.hero{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0px;
+}
+
+.herotext{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap:10px;
+}
+
+#heromain{
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+#herobutton{
+    border-radius: 10px;
+    text-align: center;
+    background-color: #3882f6;
+    width: 90px;
+    padding: 8px;
+    margin-top: 15px;
+}
+
+#heroimg{
+    width: 600px;
 }
 
 .infos{
@@ -56,7 +95,10 @@ a{
 
 .frames{
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap:20px;
+    padding: 20px;
 }
 
 .cat{
@@ -77,20 +119,35 @@ a{
     height: 250px;
 }
 
-.quote{
+.quotebanner{
     background-color: #e5e7eb;
     color: #1F2937;
-    font-style: light italic;
+    font-size: 36px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: left;
-    padding: 20px 200px;
+    padding: 50px 200px;
+}
+
+.quote{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+#quotetext{
+    font-weight: lighter;
+    font-style: italic;
 }
 
 #author{
     align-self: flex-end;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: normal;
 }
 
 .banner{
@@ -102,6 +159,8 @@ a{
     justify-content: space-evenly;
     padding: 40px;
     margin: 50px;
+    width: 600px;
+    align-self: center;
 }
 
 
